@@ -72,3 +72,7 @@ The master node has components like kube-controller-manager, kube-apiserver, kub
 20. What is the role of kube-apiserver and kube-scheduler?
 The kube — apiserver is based on a scale-out architecture. It is the front-end of the master node control panel. It exposes all the APIs of the Kubernetes Master node components and establishes communication between the Kubernetes Node and the Kubernetes master components.
 The kube-scheduler distributes and manages workload on the worker nodes. It selects the most suitable node to run the unscheduled pod based on resource requirement and keeps a track of resource utilization. It ensures that the workload is not scheduled on nodes that are already full
+
+What’s the difference between a Service and a Deployment in Kubernetes?
+A deployment is responsible for keeping a set of pods running.
+A service is responsible for enabling network access to a set of pods.
