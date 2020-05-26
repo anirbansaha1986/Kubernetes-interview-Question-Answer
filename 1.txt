@@ -1,0 +1,74 @@
+Difference between nodeport, clusterIP, load balancer &ingress?
+What is kubectl&kubelet?
+What is the use of Kube-controller manager?
+What is pod?
+How many containers can run in a pod?
+How many containers can be launched in a node?
+What is the role of Kube-Scheduler?
+How the 2 pods communicate with each other?
+How 2 containers inside a pod communicate with each other?
+What is Flannel & why we use it?
+Difference between Flannel &Calico?
+What is etcd?
+What is master &minion?
+How to make quorum of cluster?
+What is Replication controller & what it does?
+What is ingress?
+Difference between Kubernetes&DockerSwarm?
+How can you rollbck the previous version of application in Kuberntes?
+Scenario: There are 2 tables, emp, empsal if there schema changes,
+How does that deployment happens into containers/POD automatically?
+How does container know that application is getting failure?
+What is Kubernetes?
+What are KubernetesComponents?
+
+
+
+1. What are the differences between Kubernetes and Docker Swarm?
+https://medium.com/@novelvista/top-20-kubernetes-interview-questions-for-2020-46b709d4b39b
+2. What is Kubernetes?
+Kubernetes is an open-source container management tool that is responsible for container deployment, scaling & descaling of containers & load balancing. Being introduced by Google, Kubernetes offers an excellent community and is capable of working with all the cloud providers. It’s not just a containerization platform, but it is a multi-container management solution.
+3. How is Kubernetes related to Docker?
+Docker is the source of the lifecycle management of containers. In fact, the Docker image builds runtime containers. And when these individual containers need to communicate, Kubernetes come in the scene. In a nutshell, Docker builds the containers and these containers communicate with each other via Kubernetes.
+4. What is Container Orchestration?
+When all the services in a container work together to fulfill the needs of a single server, that is called container orchestration.
+5. What are the features of Kubernetes?
+The interesting features of Kubernetes are:
+Automated scheduling
+Self-healing capabilities
+Automated rollout and rollbacks
+Horizontal scaling and role balancing
+6. How does Kubernetes simplify containerized Deployment?
+Being a cloud-agnostic tool that can run on any public/private providers, Kubernetes can load balance, scale & monitor the containers. This way, it becomes your best choice to simplify containerized deployment.
+7. What is Google Container Engine?
+Google Container Engine (GKE) is an open-source management platform for Docker containers and the clusters. This Kubernetes based engine supports only those clusters that run within Google’s public cloud services.
+8. What is Heapster?
+Heapster is a cluster-wide aggregator of data provided by Kubelet running on each node. It’s a container management tool that is supported natively on the Kubernetes cluster and runs as a pod, like other pods in the cluster. It is capable of discovering all nodes in the cluster and queries usage information from the Kubernetes nodes in the cluster.
+9. What is Minikube?
+Minikube is a tool that helps in running Kubernetes locally in a smooth way. It runs a single-node Kubernetes cluster inside a virtual machine.
+10. What is Kubectl?
+Kubectl is the platform to pass commands to the cluster. It provides the CLI to run commands against the Kubernetes cluster in several ways to create and manage the Kubernetes component.
+11. What is Kubelet?
+Kubelet is an agent service that runs on each node and works on the description of containers provided to it in the PodSpec and ensures that the containers described in the PodSpec are running properly.
+12. What do you understand by Kube-proxy?
+Kube-proxy is a network proxy that can run on each and every node and is capable of simple TCP/UDP packet forwarding across backend network service.
+13. What is ETCD?
+Etcd is written in Go programming language and is a distributed key-value store used for coordinating between distributed work. So, Etcd stores the configuration data of the Kubernetes cluster, representing the state of the cluster at any given point in time.
+14. What do you understand by load balancer in Kubernetes?
+A load balancer is one of the most common and standard ways of exposing service. You can see two kinds of load balancers based on the working environment i.e. Internal Load Balancer and External Load Balancer. The Internal Load Balancer balances load and allocates the pods with the demanded configuration. External Load Balancer directs the traffic from the external load to the backend pods.
+15. What is Headless Service?
+Headless Service is similar to a ‘Normal’ service but it does not have a Cluster IP. This service guides you to reach the pods without accessing it through a proxy.
+16. What is the difference between a replica set and replication controller?
+Replica Set and Replication Controller are not very different from each other, as both of them make sure that a specified number of pod replicas are running at any given time. The only difference between them is Replica Set use Set-Based selectors, and on the other hand replication controllers use Equity-Based selectors.
+17. What are federated clusters?
+Federated clusters are clusters that can help in managing multiple Kubernetes clusters as a single cluster with the help of federated clusters. Hence, users can create multiple Kubernetes clusters within a data center/cloud and use the federation to control/manage them all in one place.
+18. What do you know about clusters in Kubernetes?
+A Kubernetes cluster is a set of node machines for running containerized applications. At a minimum, a cluster contains a worker node and a master node. The master node is responsible for maintaining the desired state of the cluster, such as which applications are running and which container images they use. Worker nodes actually run the applications and workloads.
+19. What are the different components of Kubernetes Architecture?
+There are 2 main components of Kubernetes Architecture
+The master node
+The worker node.
+The master node has components like kube-controller-manager, kube-apiserver, kube-scheduler.
+20. What is the role of kube-apiserver and kube-scheduler?
+The kube — apiserver is based on a scale-out architecture. It is the front-end of the master node control panel. It exposes all the APIs of the Kubernetes Master node components and establishes communication between the Kubernetes Node and the Kubernetes master components.
+The kube-scheduler distributes and manages workload on the worker nodes. It selects the most suitable node to run the unscheduled pod based on resource requirement and keeps a track of resource utilization. It ensures that the workload is not scheduled on nodes that are already full
